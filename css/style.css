@@ -41,9 +41,11 @@ button {
 }
 
 .siatka {
-    width: 30px;
-    height: 30px;
-    background-color: red;
+    float: left;
+    background-color: #CDD0D1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .niewidoczne {
