@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/skrypt.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zs1 minesweeper</title>
+</head>
+
+<body>
+    <div class="box">
+        <h2>minesweeper</h2>
+        <p>Wprowadź rozmiar planszy:</p>
+        <input type="number" id="rozmiar">
+        <button class="new-game-button" onclick="rozmiar_planszy()">akceptuj</button>
+        <div class="field">
+        </div>
+        <div class="lost" style="display: none;">
+            <h3>gratulacje znalazłeś logo szkoły :)</h3>
+            <button class="new-game-button" onclick="reload()">zagraj ponownie</button>
+        </div>
+    </div>
+</body>
+
+</html>
