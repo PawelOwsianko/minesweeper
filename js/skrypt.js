@@ -1,5 +1,6 @@
 var bombs = "💣";
 var flaga = "🚩";
+//pojawianie sie planszy oraz znikanie przycisku start
 function pole(){
     var przyciski = document.querySelector('.poczatek');
     przyciski.classList.add('unvisable');
