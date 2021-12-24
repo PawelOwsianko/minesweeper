@@ -18,6 +18,9 @@ for (let i = 0; i<width*width; i++) {
     square.classList.add(shuffledArray[i])
     field.appendChild(square)
     squares.push(square)
+    squares.addEventListener('click', function(e){
+        click(square)
+    })
     }
 //adding numbers to 'valid'
 for (let i = 0; i < squares.length; i++) {
@@ -27,7 +30,14 @@ for (let i = 0; i < squares.length; i++) {
 
    if (squares[i].classList.contains('valid')) {
         if (i > 0 && !isLeftEdge && squares[i -1].classList.contains('bomb')) total ++
-        if (i > 9 && !isRightEdge && squares[i +1 -width].classList.contains('bomb')) total ++ 
+        if (i > 9 && !isRightEdge && squares[i +1 -width].classList.contains('bomb')) total ++
+        if (i > 10 && squares[i - width].classList.contains('bomb')) total++ 
+        if (i > 11 && !isLeftEdge && squares [i -1 -width].classList.contains('bomb')) total ++
+        if (i < 98 && !isRightEdge && squares[i +1].classList.contains('bomb')) total ++
+        if (i < 90 && !isLeftEdge && squares[i -1 +width].classList.contains('bomb')) total ++
+        if (i < 88 && !isRightEdge && squares[i +1 +width].classList.contains('bomb')) total++
+        if (i < 89 && squares[i +width].classList.contains('bomb')) total++
+
         squares[i].setAttribute('data', total)
         console.log(squares[i])
         }   
